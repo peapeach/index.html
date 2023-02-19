@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Happy Birthday!</title>
+  </head>
+  <body>
+    <form>
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+      const form = document.querySelector('form');
+      const message = document.querySelector('#message');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = form.elements['name'].value;
+        message.textContent = `Happy birthday, ${name}! Wishing you all the best on your special day!`;
+      });
+    </script>
+
+<img src="https://drive.google.com/file/d/1V0R7hydHX_rAuFJ6uRcKdE2Ir8PK6ieo/view?usp=drivesdk.jpg" alt="Your Photo">
+<p>โชคดีนะจ๊ะ นังสารเลว</p>
+
+  </body>
+</html>
